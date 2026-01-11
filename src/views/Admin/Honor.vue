@@ -30,7 +30,7 @@
         <el-form-item label="荣誉图片" :label-width="formLabelWidth">
           <el-upload
             class="avatar-uploader"
-            action="http://shkjgw.shkjem.com/api/UpLoad/UploadImage"
+            action="http://localhost:5001/api/UpLoad/UploadImage"
             :headers="headers"
             :show-file-list="false"
             :on-success="handleSuccess"

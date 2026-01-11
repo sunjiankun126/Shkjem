@@ -60,12 +60,12 @@ export default {
     loadData() {
       this.loading = true;
       this.$http
-        .get(`News?type=${this.newstype}&num=6`)
+        .get(`news/GetNewsAll?type=${this.newstype}&num=6`)
         .then(response => {
-          //console.log(response);
-          this.newsList = response.data;
+          // console.log(response);
+          this.newsList = response.data.data;
           this.loading = false;
-          //window.console.log(this.newsList);
+          // window.console.log(this.newsList);
         })
         .catch(function(error) {
           window.console.log(error);
