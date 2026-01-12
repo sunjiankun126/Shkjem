@@ -38,7 +38,7 @@ export default {
         .get(`News/GetNewsById/${this.pid}`)
         .then(response => {
           //console.log(response);
-          this.newsIdList = response.data;
+          this.newsIdList = response.data.data;
           window.console.log(this.newsIdList);
         })
         .catch(function(error) {

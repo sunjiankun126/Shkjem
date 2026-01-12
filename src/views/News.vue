@@ -60,7 +60,7 @@ export default {
     loadData() {
       this.loading = true;
       this.$http
-        .get(`news/GetNewsAll?type=${this.newstype}&num=6`)
+        .get(`News/GetNewsAll?type=${this.newstype}&num=6`)
         .then(response => {
           // console.log(response);
           this.newsList = response.data.data;

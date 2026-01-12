@@ -37,7 +37,7 @@ export default {
         .get(`Cases/GetCasesById/${this.pid}`)
         .then(response => {
           //console.log(response);
-          this.caseIdList = response.data;
+          this.caseIdList = response.data.data;
           window.console.log(this.caseIdList);
         })
         .catch(function(error) {

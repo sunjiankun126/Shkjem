@@ -40,13 +40,14 @@ export default {
     this.$http
       .get("Cases/GetCasesAll")
       .then(response => {
-        //console.log(response);
-        this.caseList = response.data;
-        //window.console.log(this.caseList);
+        // console.log(response);
+        this.caseList = response.data.data;
+        // window.console.log(this.caseList);
         this.loading = false;
       })
-      .catch(function(error) {
+      .catch((error) => {
         window.console.log(error);
+        this.loading = false;
       });
   }
 };

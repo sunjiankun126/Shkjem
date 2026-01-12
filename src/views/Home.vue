@@ -126,12 +126,12 @@ export default {
     this.$http
       .all([
         this.$http.get("Cases/GetCasesAll"),
-        this.$http.get(`News?type=1&num=3`)
+        this.$http.get(`News/GetNewsAll?type=1&num=999`)
       ])
       .then(
         this.$http.spread((responseCases, responseNews) => {
-          this.caseList = responseCases.data;
-          this.newsList = responseNews.data;
+          this.caseList = responseCases.data.data;
+          this.newsList = responseNews.data.data;
           this.loading = false;
         })
       );
