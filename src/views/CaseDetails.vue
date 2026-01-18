@@ -3,7 +3,7 @@
     <banner img="../assets/img/bgtop.jpg" />
     <div class="case-product">
       <div class="case-product-content">
-        <img v-lazy="imgserver+caseIdList.Img" alt />
+        <img v-lazy="imgserver+caseIdList.Detail_Img" alt />
         <p class="product-title">{{caseIdList.Title}}</p>
         <p class="product-time">{{caseIdList.CreateTime}}</p>
         <p class="product-content">{{caseIdList.Content}}</p>

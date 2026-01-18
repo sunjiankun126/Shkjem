@@ -3,8 +3,8 @@
     <swiper id="swiperBox" v-bind:options="swiperOption" ref="mySwiper">
       <swiper-slide class="swiper-slide slide-one">
         <div class="page">
-          <h3>科建股份</h3>
-          <p>KeJian Stock</p>
+          <h3>骏科股份</h3>
+          <p>JunKe Stock</p>
         </div>
         <p class="slogan">立人立己 达人达己</p>
       </swiper-slide>
@@ -134,7 +134,12 @@ export default {
           this.newsList = responseNews.data.data;
           this.loading = false;
         })
-      );
+      )
+      .catch((error) => {
+        window.console.log('请求失败:', error);
+        this.loading = false;
+        // 可以添加用户提示
+      });
   }
 };
 </script>

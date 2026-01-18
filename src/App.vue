@@ -16,8 +16,8 @@
           <el-menu-item index="/news">新闻资讯</el-menu-item>
           <el-menu-item index="/product">产品中心</el-menu-item>
           <el-menu-item index="/case">经典案例</el-menu-item>
-          <el-menu-item index="/goin">走进科建</el-menu-item>
-          <el-menu-item index="/download">下载APP</el-menu-item>
+          <el-menu-item index="/goin">走进骏科</el-menu-item>
+          <!-- <el-menu-item index="/download">下载APP</el-menu-item> -->
         </el-menu>
       </el-header>
       <el-main>
@@ -27,7 +27,7 @@
         <div class="footer-content">
           <ul class="content-nav">
             <li>
-              <p>走进科建</p>
+              <p>走进骏科</p>
               <span>发展历程</span>
               <span>企业文化</span>
               <span>资质荣誉</span>
@@ -47,18 +47,30 @@
             </li>
             <li>
               <p>联系我们</p>
-              <span>邮箱：kejianlml@163.com</span>
-              <span>电话：021-55802368</span>
-              <span>地址：上海市杨浦区翔殷路128号12号楼101</span>
+              <span>邮箱：564954025@qq.com</span>
+              <span>电话：15793025764</span>
+              <span>地址：南京市六合区南京现代表面处理科技产业园</span>
             </li>
           </ul>
-          <img src="./assets/img/ercode.png" alt />
+          <img src="./assets/img/address_map.png" @click="handleImageClick" style="cursor: pointer;" />
         </div>
         <div class="copyright">
-          <span>科建版权所有</span>
+          <span>骏科科技有限公司版权所有</span>
         </div>
       </div>
     </el-container>
+    
+    <!-- 图片放大对话框 -->
+    <el-dialog
+      :visible.sync="dialogImageVisible"
+      :close-on-click-modal="true"
+      :close-on-press-escape="true"
+      :show-close="true"
+      width="80%"
+      title=""
+    >
+      <img :src="dialogImageUrl" style="width: 100%;" />
+    </el-dialog>
   </div>
 </template>
 
@@ -68,13 +80,19 @@ export default {
     return {
       router: true,
       defaultActive: "/",
-      isShow: false
+      isShow: false,
+      dialogImageVisible: false,
+      dialogImageUrl: './assets/img/address_map.png'
     };
   },
   methods: {
     handleSelect(key) {
       this.isShow = this.defaultActive != key;
       window.console.log(this.isShow);
+    },
+    handleImageClick() {
+      this.dialogImageUrl = './assets/img/address_map.png';
+      this.dialogImageVisible = true;
     }
   }
 };
