@@ -178,8 +178,8 @@ export default {
 }
 //经典案例
 .case-item {
-  width: 1100px;
-  height: 500px;
+  width: 1200px;
+  height: 620px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 30px;
@@ -187,8 +187,8 @@ export default {
   flex-wrap: wrap;
   justify-content: flex-start;
   li {
-    width: 330px;
-    height: 250px;
+    width: 360px;
+    height: 300px;
     list-style: none;
     background-repeat: no-repeat;
     background-size: cover;
@@ -213,9 +213,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  opacity: 0 !important;
   overflow: hidden;
   background-color: rgba(225, 56, 52, 0.7);
+  transition: all 0.4s ease-in-out;
 
   .hover-title {
     height: 50px;

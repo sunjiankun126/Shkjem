@@ -35,6 +35,11 @@ let kejianrouter = new Router({
       component: () => import('./views/CaseDetails.vue')
     },
     {
+      path: '/learn',
+      name: 'learnCase',
+      component: () => import('./views/LearnCase.vue'),
+    },
+    {
       path: '/goin',
       name: 'goin',
       component: () => import('./views/GoIn.vue')

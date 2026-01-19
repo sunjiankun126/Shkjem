@@ -12,10 +12,10 @@
           @select="handleSelect"
           :router="router"
         >
-          <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/news">新闻资讯</el-menu-item>
-          <el-menu-item index="/product">产品中心</el-menu-item>
+          <el-menu-item index="/">首页</el-menu-item>          
           <el-menu-item index="/case">经典案例</el-menu-item>
+          <el-menu-item index="/news">新闻资讯</el-menu-item>
+          <el-menu-item index="/learn">学习中心</el-menu-item>
           <el-menu-item index="/goin">走进骏科</el-menu-item>
           <!-- <el-menu-item index="/download">下载APP</el-menu-item> -->
         </el-menu>
