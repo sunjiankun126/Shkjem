@@ -28,31 +28,36 @@
           <ul class="content-nav">
             <li>
               <p>走进骏科</p>
-              <span>发展历程</span>
-              <span>企业文化</span>
-              <span>资质荣誉</span>
-              <span>合作伙伴</span>
+              <router-link class="text-decoration" to="/">
+                <span>首页</span>
+              </router-link>
+              <router-link class="text-decoration" to="/goin">
+                <span>走进骏科</span>
+              </router-link>
             </li>
             <li>
               <p>新闻资讯</p>
-              <span>公司新闻</span>
-              <span>行业动态</span>
+              <router-link class="text-decoration" to="/news">
+                <span>公司新闻</span>
+              </router-link>
+              <router-link class="text-decoration" to="/news">
+                <span>行业动态</span>
+              </router-link>
             </li>
             <li>
-              <p>产品中心</p>
-              <span>介绍视频</span>
-              <span>管理模式</span>
-              <span>平台目标</span>
-              <span>功能模块</span>
+              <p>学习中心</p>
+              <router-link class="text-decoration" to="/learn">
+                <span>工艺原理</span>
+              </router-link>
+              
             </li>
             <li>
               <p>联系我们</p>
-              <span>*****@qq.com</span>
+              <span>邮箱：5649540**@qq.com</span>
               <span>电话：1579302****</span>
               <span>地址：南京市六合区南京现代表面处理科技产业园</span>
             </li>
           </ul>
-          <img src="./assets/img/address_map.png" @click="handleImageClick" style="cursor: pointer;" />
         </div>
         <div class="copyright">
           <span>骏科科技有限公司版权所有</span>
@@ -81,18 +86,13 @@ export default {
       router: true,
       defaultActive: "/",
       isShow: false,
-      dialogImageVisible: false,
-      dialogImageUrl: './assets/img/address_map.png'
+      dialogImageVisible: false
     };
   },
   methods: {
     handleSelect(key) {
       this.isShow = this.defaultActive != key;
       window.console.log(this.isShow);
-    },
-    handleImageClick() {
-      this.dialogImageUrl = './assets/img/address_map.png';
-      this.dialogImageVisible = true;
     }
   }
 };
@@ -181,6 +181,11 @@ body {
       color: #fff;
       line-height: 30px;
     }
+  }
+
+  .text-decoration {
+    text-decoration: none;
+    color: inherit;
   }
 }
 </style>
