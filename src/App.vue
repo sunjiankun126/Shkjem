@@ -47,8 +47,8 @@
             </li>
             <li>
               <p>联系我们</p>
-              <span>邮箱：564954025@qq.com</span>
-              <span>电话：15793025764</span>
+              <span>*****@qq.com</span>
+              <span>电话：1579302****</span>
               <span>地址：南京市六合区南京现代表面处理科技产业园</span>
             </li>
           </ul>

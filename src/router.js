@@ -12,17 +12,17 @@ let kejianrouter = new Router({
     {
       path: '/news',
       name: 'news',
-      component: () => import('./views/News.vue'),
+      component: () => import('./views/News.vue')
     },
     {
       path: '/newsdetails/:id',
       name: 'newsdetails',
-      component: () => import('./views/NewsDetails.vue'),
+      component: () => import('./views/NewsDetails.vue')
     },
     {
       path: '/product',
       name: 'product',
-      component: () => import('./views/Product.vue'),
+      component: () => import('./views/Product.vue')
     },
     {
       path: '/case',
@@ -36,8 +36,13 @@ let kejianrouter = new Router({
     },
     {
       path: '/learn',
-      name: 'learnCase',
-      component: () => import('./views/LearnCase.vue'),
+      name: 'LearnCase',
+      component: () => import('./views/LearnCase.vue')
+    },
+    {
+      path: '/learnCaseDetails/:id',
+      name: 'LearnCaseDetails',
+      component: () => import('./views/LearnCaseDetails.vue')
     },
     {
       path: '/goin',

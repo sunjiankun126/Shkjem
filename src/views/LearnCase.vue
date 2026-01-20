@@ -3,17 +3,7 @@
     <banner title="学习中心" />
     <div class="news-section" v-loading="loading">
       <div class="news-section-content">
-        <div class="content-nav">
-          <div
-            class="content-nav-btn"
-            :class="{'content-nav-active':learntype == 1}"
-            @click="learntype = 1"
-          >
-            <span>学习中心</span>
-          </div>
-          
-        </div>
-
+        
         <div class="content-nav-item">
           <div class="item-list" v-for="(item,index) in learnList" :key="index">
             <div class="item-img" v-lazy:background-image="imgserver + item.Img"></div>
@@ -22,7 +12,7 @@
             <div class="item-list-more">
               <router-link
                 class="text-decoration"
-                :to="{ name: 'learnCasedetails', params: { id: item.Id }}"
+                :to="{ name: 'LearnCaseDetails', params: { id: item.Id }}"
               >
                 <img src="../assets/img/sanjiao.png" />
                 <span>more</span>
@@ -38,7 +28,7 @@
 <script>
 import Banner from "../components/Banner";
 export default {
-  name: "learnCase",
+  name: "LearnCase",
   components: {
     Banner
   },
@@ -106,7 +96,7 @@ export default {
         border: 1px solid red;
 
         &-btn {
-          width: 50%;
+          width: 100%;
           height: 100%;
           display: flex;
           align-items: center;
