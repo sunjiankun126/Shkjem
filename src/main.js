@@ -34,7 +34,7 @@ Vue.config.productionTip = false
 axios.defaults.timeout = 15000
 //设置api地址
 //全局定义axios
-axios.defaults.baseURL = 'http://localhost:5001/api/'
+axios.defaults.baseURL = 'http://60.204.227.222:5003/api/'
 Vue.prototype.$http = axios
 
 // 图片服务器地址
